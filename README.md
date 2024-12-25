@@ -26,7 +26,7 @@ there are three main directories in `./src/`:
 > [!NOTE]
 > If you want to change this pages names or directories take note that you should change this two files:
 
-- [vite.config.ts](./vite.config.ts) : change entry paths in `input` option :
+1. [vite.config.ts](./vite.config.ts) : change entry paths in `input` option :
 
 ```javascript
 export default defineConfig({
@@ -50,11 +50,10 @@ export default defineConfig({
 
 <br/>
 
-- [manifest.json](./public/manifest.json) : change following paths to the names you have chosen in `vite.config.ts`
+2. [manifest.json](./public/manifest.json) : change following paths to the names you have chosen in `vite.config.ts`
 
 ```json
 {
-...
   "background": {
     "service_worker": "background/background.js"
   },
@@ -63,16 +62,15 @@ export default defineConfig({
       "matches": ["<all_urls>"],
       "js": ["content/content.js"]
     }
-...
+  ]
 }
 ```
 
 ## Build
 
-> [!WARNING]
-> **take a note that manifest v3 needs an icon to work properly.**
+> [!WARNING] > **take a note that manifest v3 needs an icon to work properly.**
 
-for using your costume icon place your `icon.png` file in `./src/assets/` directory and replace it with default one.
+for using your custom icon, place your `icon.png` file in `./src/assets/` directory and replace it with default one.
 then run build command:
 
 ```console
